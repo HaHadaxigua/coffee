@@ -2,7 +2,7 @@
 // Created by Miku on 2022/9/25.
 //
 #include <stdlib.h>
-#include "memory.h"
+#include "../include/memory.h"
 
 void *reallocate(void *pointer, size_t oldSize, size_t newSize) {
     // When newSize is zero,
