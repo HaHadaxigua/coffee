@@ -1,0 +1,6 @@
+# ninja log v5
+0	88	1664089269831407556	CMakeFiles/coffee.dir/main.c.o	da9d0e36b457ce76
+1	88	1664089269831438389	CMakeFiles/coffee.dir/chunk.c.o	dc88b115b84a005c
+1	88	1664089269831395472	CMakeFiles/coffee.dir/memory.c.o	9fbaca06ca1b7f8f
+1	88	1664089269831414306	CMakeFiles/coffee.dir/debug.c.o	75ec1d08bf4c118
+88	137	1664089269882027728	coffee	1f9b0e90edddb1d

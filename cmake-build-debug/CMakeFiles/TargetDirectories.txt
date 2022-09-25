@@ -1,0 +1,3 @@
+/Users/dh/Code/c/coffee/cmake-build-debug/CMakeFiles/coffee.dir
+/Users/dh/Code/c/coffee/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dh/Code/c/coffee/cmake-build-debug/CMakeFiles/rebuild_cache.dir
