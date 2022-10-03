@@ -31,7 +31,7 @@ void initVM(VM *vm);
 void freeVM(VM *vm);
 
 // the main entrypoint into the VM
-InterpretResult interpret(VM *vm, Chunk *chunk);
+InterpretResult interpret(VM *vm, const char *source);
 
 // Stack protocol: push
 void push(VM *vm, Value value);

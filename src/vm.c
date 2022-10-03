@@ -6,7 +6,7 @@
 #include "../include/common.h"
 #include "../include/vm.h"
 #include "../include/debug.h"
-
+#include "../include/compiler.h"
 
 static void resetStack(VM *vm) {
     vm->stackTop = vm->stack;
@@ -95,8 +95,7 @@ static InterpretResult run(VM *vm) {
 #undef BINARY_OP     // end the marco scope earlier
 }
 
-InterpretResult interpret(VM *vm, Chunk *chunk) {
-    vm->chunk = chunk;
-    vm->ip = vm->chunk->code;
-    return run(vm);
+InterpretResult interpret(VM *vm, const char *source) {
+    compile(source);
+    return INTERPRET_OK;
 }
