@@ -96,6 +96,20 @@ static InterpretResult run(VM *vm) {
 }
 
 InterpretResult interpret(VM *vm, const char *source) {
-    compile(source);
-    return INTERPRET_OK;
+    // create an empty chunk and pass it to the compiler
+    Chunk chunk;
+    initChunk(&chunk);
+
+    if (!compile(source, &chunk)) {
+        freeChunk(&chunk);
+        return INTERPRET_COMPILE_ERROR;
+    }
+
+    vm->chunk = &chunk; // send chunk to the VM
+    vm->ip = vm->chunk->code;
+
+    InterpretResult result = run(vm);
+    freeChunk(&chunk);
+
+    return result;
 }
